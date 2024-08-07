@@ -1,0 +1,21 @@
+.btn {
+  border: none;
+  padding: 15px 32px;
+  letter-spacing: 0.5cap;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn--primary {
+  border: 1px solid var(--light);
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.btn--primary:hover {
+  background-color: var(--primary);
+}
