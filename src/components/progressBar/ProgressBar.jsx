@@ -8,13 +8,15 @@ const ProgressBar = () => {
 
   return (
     <div className='progressBar'>
-      <div
-        className='progressBar__progress'
-        style={{ width: `${currentQuestion * 10}%` }}
-      >
-        {' '}
-        {currentQuestion * 10} %{' '}
-      </div>
+      {currentQuestion === 0 ? null : (
+        <div
+          className='progressBar__progress'
+          style={{ width: `${currentQuestion * 10}%` }}
+        >
+          {' '}
+          {currentQuestion * 10} %{' '}
+        </div>
+      )}
     </div>
   );
 };

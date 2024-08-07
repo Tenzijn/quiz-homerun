@@ -19,7 +19,7 @@ function App() {
   const [isGameStart, setIsGameStart] = useState(true);
   const [isGameOver, setIsGameOver] = useState(false);
   const [score, setScore] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(4);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [isCorrect, setIsCorrect] = useState(false);
 
@@ -80,8 +80,8 @@ function App() {
       <main className='App'>
         <Logo />
         <ScoreBar />
-        {/* <Info /> */}
-        <Carousel />
+        <Info />
+        {/* <Carousel /> */}
         <ProgressBar />
       </main>
     </ApiContext.Provider>
