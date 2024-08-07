@@ -1,0 +1,20 @@
+.infoSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.infoSection__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.infoSection__text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
