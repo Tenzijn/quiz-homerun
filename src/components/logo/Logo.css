@@ -1,0 +1,53 @@
+/* Default styles */
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo__img {
+  width: 100%;
+  height: 100%;
+  border-right: 3px solid var(--white);
+  border-bottom: 3px solid var(--white);
+}
+
+/* Media queries for different screen sizes */
+@media (max-height: 500px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo__img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo__img {
+    width: 75%;
+    height: 75%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .logo__img {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .logo__img {
+    width: 100%;
+    height: 100%;
+  }
+}
