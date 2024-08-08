@@ -18,3 +18,37 @@
   font-weight: 400;
   margin-bottom: 20px;
 }
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.options > select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 20px 0;
+  padding: 10px;
+  background-color: transparent;
+  color: var(--light);
+  border-bottom: 1px solid var(--light);
+  width: 150px;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align-last: center;
+  text-align: center;
+  height: 50px;
+}
+
+.options > select > option {
+  background-color: var(--dark);
+  color: var(--light);
+  display: flex;
+}
