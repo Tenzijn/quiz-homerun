@@ -18,6 +18,8 @@
   --dark: #2c2d2f;
   --white: #fff;
   --black: #000;
+  /* To remove blinking text input cursor */
+  caret-color: transparent;
 }
 
 body {
