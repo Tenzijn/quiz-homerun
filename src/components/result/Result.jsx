@@ -1,7 +1,13 @@
+import Reset from '../reset/Reset';
 import './Result.css';
 
 const Result = () => {
-  return <div>Result</div>;
+  return (
+    <>
+      <Reset />
+      <div>Result</div>
+    </>
+  );
 };
 
 export default Result;
