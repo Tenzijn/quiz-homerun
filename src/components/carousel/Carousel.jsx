@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { ApiContext } from '../../context/ApiContext';
 
 import Loading from '../loading/Loading';
@@ -22,19 +22,9 @@ const Carousel = () => {
     setUserAnswers,
     setDifficulty,
     setType,
+    disabled,
+    setDisabled,
   } = useContext(ApiContext);
-  const [disabled, setDisabled] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
 
   return isLoading ? (
     <Loading />
@@ -108,7 +98,8 @@ const Carousel = () => {
                         disabled[index] && question.correct_answer === answer
                           ? 'green'
                           : question.correct_answer !== answer &&
-                            userAnswers.includes(answer)
+                            userAnswers.includes(answer) &&
+                            disabled[index]
                           ? 'red'
                           : null,
                     }}
