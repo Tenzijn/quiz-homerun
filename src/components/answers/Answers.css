@@ -1,0 +1,27 @@
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.answer {
+  display: inline-block;
+  width: 40%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid var(--light);
+  color: var(--light);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: large;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.answer:hover {
+  background-color: var(--primary);
+}
