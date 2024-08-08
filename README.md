@@ -41,7 +41,7 @@
 
 ## About The Project
 
-![Powerpuff Girls](./public/Screenshot-1.png)
+![Quize Games](./public/screenshot-1.png)
 
 This is a simple but modern UI for the Quiz Game. The app is built using ReactJs.
 
@@ -125,9 +125,9 @@ Tenzin Kunchok - tenzinkunchok2022@gmail.com
 
 ## More Images
 
-![Screenhot-2](./public/Screenshot-2.png)
+![Quize Game start](./public/screenshot-2.png)
 
-![Screenhot-3](./public/Screenshot-3.png)
+![Quize Game selected](./public//screenshot-3.png)
 
 ## Acknowledgments
 
