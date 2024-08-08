@@ -7,7 +7,7 @@
   <h3 align="center">✨Quiz Game✨</h3>
 
   <p align="center">
-	Tech assignment for the role of Frontend Developer at Homerun
+	Tech assignment for the role of Fullstack Developer at Homerun
   </p>
 </div>
 
