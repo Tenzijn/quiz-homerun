@@ -4,6 +4,7 @@ import { ApiContext } from '../../context/ApiContext';
 import Loading from '../loading/Loading';
 
 import './Carousel.css';
+import Reset from '../reset/Reset';
 
 const Carousel = () => {
   const {
@@ -58,8 +59,7 @@ const Carousel = () => {
             </a>
           ))}
         </div>
-        <span
-          className='resetBtn'
+        <Reset
           onClick={() => {
             setQuestions([]);
             setIsLoading(true);
@@ -71,9 +71,7 @@ const Carousel = () => {
             setDifficulty('easy');
             setType('multiple');
           }}
-        >
-          Reset
-        </span>
+        />
 
         <div className='slides'>
           {questions.map((question, index) => (
