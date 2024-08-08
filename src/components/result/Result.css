@@ -1,0 +1,23 @@
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.result__title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.result__score {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.result__score__number {
+  font-size: 2rem;
+  font-weight: bold;
+}
