@@ -1,6 +1,15 @@
+import { useContext } from 'react';
+import { ApiContext } from '../../context/ApiContext';
 import './Buttons.css';
+
 const Buttons = () => {
-  return <div className='btn btn--primary'>NEXT</div>;
+  const { setIsGameStart } = useContext(ApiContext);
+
+  return (
+    <div className='btn btn--primary' onClick={() => setIsGameStart(true)}>
+      START
+    </div>
+  );
 };
 
 export default Buttons;
