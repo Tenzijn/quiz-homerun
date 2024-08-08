@@ -10,18 +10,18 @@ import Logo from './components/logo/Logo';
 import './App.css';
 import Info from './components/info/Info';
 import Carousel from './components/carousel/Carousel';
+import Result from './components/result/Result';
 
 function App() {
   const [questions, setQuestions] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [difficulty, setDifficulty] = useState('easy');
   const [type, setType] = useState('multiple');
-  const [isGameStart, setIsGameStart] = useState(true);
+  const [isGameStart, setIsGameStart] = useState(false);
   const [isGameOver, setIsGameOver] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
-  const [isCorrect, setIsCorrect] = useState(false);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -29,7 +29,14 @@ function App() {
         const response = await axios.get(
           `https://opentdb.com/api.php?amount=10&category=18&difficulty=${difficulty}&type=${type}`
         );
-        console.log(response);
+
+        response.data.results.forEach((question) => {
+          question.answers = [
+            ...question.incorrect_answers,
+            question.correct_answer,
+          ];
+          question.answers.sort(() => Math.random() - 0.5);
+        });
         setQuestions(response.data.results);
         setIsLoading(false);
         isGameStart ? setIsGameOver(false) : null;
@@ -72,16 +79,19 @@ function App() {
         setCurrentQuestion,
         userAnswers,
         setUserAnswers,
-        isCorrect,
-        setIsCorrect,
         restart,
       }}
     >
       <main className='App'>
         <Logo />
         <ScoreBar />
-        <Info />
-        {/* <Carousel /> */}
+        {isGameStart && !isGameOver ? (
+          <Carousel />
+        ) : isGameOver ? (
+          <Result />
+        ) : (
+          <Info />
+        )}
         <ProgressBar />
       </main>
     </ApiContext.Provider>
