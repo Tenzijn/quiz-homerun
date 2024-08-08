@@ -1,0 +1,16 @@
+.resetBtn {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  display: inline-flex;
+  width: 5rem;
+  height: 3rem;
+  background-color: var(--danger);
+  text-decoration: none;
+  color: var(--light);
+  align-items: center;
+  justify-content: center;
+  margin: 0 0rem 3rem 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
