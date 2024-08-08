@@ -13,6 +13,7 @@ const Reset = () => {
     setUserAnswers,
     setDifficulty,
     setType,
+    setDisabled,
   } = useContext(ApiContext);
   return (
     <div
@@ -27,6 +28,18 @@ const Reset = () => {
         setUserAnswers([]);
         setDifficulty('easy');
         setType('multiple');
+        setDisabled([
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+        ]);
       }}
     >
       Reset
