@@ -4,17 +4,20 @@ import { ApiContext } from '../../context/ApiContext';
 import './ProgressBar.css';
 
 const ProgressBar = () => {
-  const { currentQuestion } = useContext(ApiContext);
+  const { userAnswers } = useContext(ApiContext);
+  const totalQuestions = 10;
+  const totalNumberOfAnswers = userAnswers.length;
+  const percentage = (totalNumberOfAnswers / totalQuestions) * 100;
 
   return (
     <div className='progressBar'>
-      {currentQuestion === 0 ? null : (
+      {totalNumberOfAnswers === 0 ? null : (
         <div
           className='progressBar__progress'
-          style={{ width: `${currentQuestion * 10}%` }}
+          style={{ width: `${percentage}%` }}
         >
           {' '}
-          {currentQuestion * 10} %{' '}
+          {percentage} %{' '}
         </div>
       )}
     </div>
