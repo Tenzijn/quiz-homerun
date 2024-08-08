@@ -1,7 +1,6 @@
 import './Answers.css';
 
 const Answers = (answers) => {
-  console.log(answers);
   return (
     <div className='answers'>
       {answers.map((answer, index) => (
