@@ -89,7 +89,9 @@ const Carousel = () => {
                         return updatedDisabled;
                       });
                       userAnswers.length === questions.length - 1
-                        ? setIsGameOver(true)
+                        ? setTimeout(() => {
+                            setIsGameOver(true);
+                          }, 2000)
                         : null;
                     }}
                     style={{
