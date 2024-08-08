@@ -22,6 +22,18 @@ function App() {
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
+  const [disabled, setDisabled] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -80,6 +92,8 @@ function App() {
         userAnswers,
         setUserAnswers,
         restart,
+        disabled,
+        setDisabled,
       }}
     >
       <main className='App'>
