@@ -6,9 +6,6 @@
   
   <h3 align="center">✨Quiz Game✨</h3>
 
-  <p align="center">
-	Tech assignment for the role of Fullstack Developer at Homerun
-  </p>
 </div>
 
 <hr/>
@@ -84,7 +81,7 @@ You need to have the following installed on your machine:
 
 ### Installation
 
-This app is built using NextJs, so you need to have NodeJs installed on your machine. Here's how you can get started:
+This app is built using ReactJs, so you need to have NodeJs installed on your machine. Here's how you can get started:
 
 1. Clone the repo
    ```sh
